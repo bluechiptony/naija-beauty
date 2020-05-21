@@ -1,0 +1,9 @@
+@import "styles/colors";
+@import "styles/text";
+@import "styles/elements";
+
+.centered-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

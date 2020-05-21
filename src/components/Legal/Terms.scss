@@ -1,0 +1,17 @@
+.terms-page {
+  height: 100vh;
+  overflow-y: scroll;
+  background-image: url("../../assets/images/terms-babe.jpg");
+  background-position: top;
+  box-sizing: border-box;
+  padding: 4rem;
+
+  .terms-content {
+    width: 50%;
+    color: white;
+    span {
+      font-size: 0.9rem;
+      line-height: 1.4rem;
+    }
+  }
+}

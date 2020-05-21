@@ -1,0 +1,22 @@
+.section-padding {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.app-button {
+  display: block;
+  padding: 1rem 2rem;
+  border-radius: 0.1rem;
+  cursor: pointer;
+
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-weight: 700;
+
+  border: 0;
+  transition: all 0.3s ease-in-out;
+}

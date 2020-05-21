@@ -1,0 +1,36 @@
+@import "../../styles/colors.scss";
+
+.center-intro {
+  text-align: center;
+  width: 50%;
+}
+
+.contestants-spacer {
+  padding-top: 5rem;
+}
+.contestants-grid {
+  margin: 0 auto;
+  width: 60%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.sign-up-button {
+  display: block;
+  padding: 1rem 2rem;
+  border-radius: 0.1rem;
+  cursor: pointer;
+  font-size: 1.1rem;
+  background-color: $yellow;
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-weight: 700;
+  color: #ffffff;
+  border: 0;
+  transition: all 0.3s ease-in-out;
+}
+.sign-up-button:hover {
+  background-color: darken($color: $yellow, $amount: 20);
+  padding-right: 4rem;
+}

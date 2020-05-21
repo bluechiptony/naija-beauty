@@ -1,0 +1,126 @@
+@import "../../styles/colors.scss";
+.hero-height {
+  box-sizing: border-box;
+  min-height: 670px;
+}
+
+.hero-bg {
+  background-image: url("../../assets/images/hero-babe.jpg");
+  background-size: cover;
+}
+.bg-register {
+  background-image: url("../../assets/images/how-to-register.jpg");
+  background-size: cover;
+}
+
+.hero-text-holder {
+  @extend .hero-height;
+  display: flex;
+  align-items: center;
+
+  .hero-text-block {
+    width: 35%;
+    padding: 3rem 5rem;
+    color: white;
+    .hero-value {
+      font-size: 2.2rem;
+      line-height: 3rem;
+      padding: 1rem 0rem;
+      .bp {
+        font-weight: 700;
+        font-size: 3rem;
+        font-family: "Montserrat";
+      }
+    }
+
+    .hero-sub {
+      font-size: 0.9rem;
+      padding: 2rem 0rem;
+      line-height: 2rem;
+    }
+    span {
+      display: block;
+    }
+  }
+}
+
+.section-padding {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 5rem;
+}
+
+.sign-up-button {
+  display: block;
+  padding: 1rem 2rem;
+  border-radius: 0.1rem;
+  cursor: pointer;
+  font-size: 1.1rem;
+  background-color: $yellow;
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-weight: 700;
+  color: #ffffff;
+  border: 0;
+  transition: all 0.3s ease-in-out;
+}
+.sign-up-button:hover {
+  background-color: darken($color: $yellow, $amount: 20);
+  padding-right: 4rem;
+}
+
+// start navigation bar
+
+.navigation-bar {
+  height: 60px;
+  line-height: 25px;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background-color: #020202;
+  box-shadow: 0 0 30px 0 #0505051c;
+  li {
+    list-style: none;
+    float: left;
+    padding: 0 20px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+  }
+  .menu-list {
+    margin-right: auto;
+  }
+  a {
+    color: #ffffff;
+    // font-weight: bold;
+
+    font-size: 0.9rem;
+    transition: color 0.3s ease-in-out;
+    text-decoration: none;
+  }
+  a:active {
+    text-decoration: none;
+  }
+  a:hover {
+    color: $yellow;
+  }
+}
+
+.active-route {
+  color: $yellow;
+}
+
+.router-holder {
+  padding: 20px 10%;
+  background-color: rgb(247, 247, 247);
+}
+
+//end navigation bar

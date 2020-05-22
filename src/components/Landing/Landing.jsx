@@ -42,7 +42,9 @@ export const HeroSection = () => {
             <span className="hero-sub italics">From anywhere Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, voluptatum libero. Facere obcaecati consequatur quis</span>
           </div>
           <div>
-            <button className="sign-up-button">Sign up now</button>
+            <NavLink to="/sign-up">
+              <button className="sign-up-button">Sign up now</button>
+            </NavLink>
           </div>
         </div>
       </div>
@@ -53,7 +55,23 @@ export const HeroSection = () => {
 export const HowItWorks = () => {
   return (
     <div className="hero-height bg-register section-padding">
-      <h1>How to register</h1>
+      <div className="how-to-box text-white">
+        <div>
+          <h1 className="text-white">How to register</h1>
+        </div>
+        <div>
+          <span className="sub-heading block">Requirements</span>
+          <span className="light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto natus quisquam exercitationem aut quo dicta eos, commodi porro inventore voluptatum. Facere ipsum beatae sit voluptate? Praesentium assumenda a, ea ipsam eius, debitis molestiae illum sunt veniam recusandae aliquid officiis, doloribus quis facere commodi eveniet! Molestiae aut magnam asperiores veritatis facere?</span>
+        </div>
+        <div className="button-grid">
+          <div>
+            <button className="app-button text-white bg-yellow">Previous</button>
+          </div>
+          <div>
+            <button className="app-button text-white bg-yellow">Next</button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
@@ -132,11 +150,13 @@ export const NavigationBar = () => {
             <span>Terms & conditions</span>
           </NavLink>
         </li>
-        <li className="menu-list-item">
-          <NavLink to="/home/profile">
-            <span>Sign up</span>
+        {/* <li className="menu-list-item">
+          <NavLink to="/login">
+            <button className="app-button">
+              <span>Login</span>
+            </button>
           </NavLink>
-        </li>
+        </li> */}
       </ul>
     </nav>
   );

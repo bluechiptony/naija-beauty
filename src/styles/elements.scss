@@ -1,6 +1,21 @@
+@import "colors";
+.full-width {
+  width: 100%;
+}
+
+.hero-height {
+  box-sizing: border-box;
+  min-height: 670px;
+}
+
 .section-padding {
   padding-top: 5rem;
   padding-bottom: 5rem;
+}
+
+.app-form-row {
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .pointer {
@@ -19,4 +34,11 @@
 
   border: 0;
   transition: all 0.3s ease-in-out;
+  &.bg-yellow:hover {
+    background-color: darken($color: $yellow, $amount: 20);
+  }
+}
+
+.block {
+  display: block;
 }

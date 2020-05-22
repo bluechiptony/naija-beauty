@@ -10,7 +10,7 @@
 }
 .contestants-grid {
   margin: 0 auto;
-  width: 60%;
+  width: 80%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
@@ -33,4 +33,41 @@
 .sign-up-button:hover {
   background-color: darken($color: $yellow, $amount: 20);
   padding-right: 4rem;
+}
+
+.contestant-name {
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 0.2rem 0rem;
+}
+
+.contestant-box {
+  box-sizing: border-box;
+  // padding: 0.2rem;
+  position: relative;
+  box-shadow: 0 0 40px 0 #0000003a;
+  .contestant-image {
+    width: 100%;
+    overflow: hidden;
+    img {
+      max-width: 100%;
+    }
+  }
+  .contestant-details {
+    position: absolute;
+    bottom: 51px;
+    box-sizing: border-box;
+    padding: 1rem 2rem;
+    width: 100%;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.468);
+  }
+}
+
+.detail-spacer {
+  display: flex;
+  justify-content: space-between;
+  .contestant-label {
+    font-size: 0.8rem;
+  }
 }

@@ -13,7 +13,7 @@ export const ContestIntro = () => {
       intro: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, quaerat quod voluptate nulla distinctio provident esse sapiente",
     },
     {
-      id: "2332",
+      id: "0349",
       fullName: "kate Ogoji",
       age: "20",
       height: "5'4 ",
@@ -21,7 +21,7 @@ export const ContestIntro = () => {
       intro: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, quaerat quod voluptate nulla distinctio provident esse sapiente",
     },
     {
-      id: "2332",
+      id: "0239",
       fullName: "Cynthia Abel",
       age: "24",
       height: "5'7 ",
@@ -29,7 +29,7 @@ export const ContestIntro = () => {
       intro: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, quaerat quod voluptate nulla distinctio provident esse sapiente",
     },
     {
-      id: "2332",
+      id: "02439",
       fullName: "kate Ogoji",
       age: "20",
       height: "5'4 ",
@@ -50,7 +50,8 @@ export const ContestIntro = () => {
 
       <div className="contestants-spacer">
         <div className="contestants-grid">
-          {contestants.map((contestant) => {
+          {contestants.map((contestant, i) => {
+            if (i > 3) return;
             return <Contestant id={contestant.id} key={contestant.id} fullName={contestant.fullName} age={contestant.age} height={contestant.height} />;
           })}
         </div>

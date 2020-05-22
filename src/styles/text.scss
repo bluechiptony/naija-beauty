@@ -1,7 +1,25 @@
 .italics {
   font-style: italic;
 }
-
+.bold {
+  font-weight: 700;
+}
 .light {
   font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.right-text {
+  text-align: right;
+}
+
+.subtitle {
+  font-size: 0.9rem;
 }

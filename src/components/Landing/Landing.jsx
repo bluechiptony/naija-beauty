@@ -3,6 +3,8 @@ import "./Landing.scss";
 import { BrowserRouter, NavLink, Route } from "react-router-dom";
 import { ContestIntro } from "../Contests/ContestIntro";
 import { Terms } from "../Legal/Terms";
+import UilListUiAlt from "@iconscout/react-unicons/icons/uil-list-ui-alt";
+import * as Unicons from "@iconscout/react-unicons";
 
 export const Landing = () => {
   return (
@@ -23,7 +25,7 @@ export const Home = () => {
       <HeroSection />
       <ContestIntro />
       <HowItWorks />
-      <LatestContest />
+      {/* <LatestContest /> */}
       <RulesRegulations />
     </div>
   );
@@ -63,11 +65,14 @@ export const HowItWorks = () => {
           <span className="sub-heading block">Requirements</span>
           <span className="light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto natus quisquam exercitationem aut quo dicta eos, commodi porro inventore voluptatum. Facere ipsum beatae sit voluptate? Praesentium assumenda a, ea ipsam eius, debitis molestiae illum sunt veniam recusandae aliquid officiis, doloribus quis facere commodi eveniet! Molestiae aut magnam asperiores veritatis facere?</span>
         </div>
+        <div>
+          <UilListUiAlt size="40" color="#ffffff" />
+        </div>
         <div className="button-grid">
           <div>
             <button className="app-button text-white bg-yellow">Previous</button>
           </div>
-          <div>
+          <div className="pull-right">
             <button className="app-button text-white bg-yellow">Next</button>
           </div>
         </div>
@@ -150,13 +155,13 @@ export const NavigationBar = () => {
             <span>Terms & conditions</span>
           </NavLink>
         </li>
-        {/* <li className="menu-list-item">
+        <li className="menu-list-item">
           <NavLink to="/login">
-            <button className="app-button">
+            <button className="app-button bg-yellow text-white">
               <span>Login</span>
             </button>
           </NavLink>
-        </li> */}
+        </li>
       </ul>
     </nav>
   );

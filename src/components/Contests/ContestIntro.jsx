@@ -1,8 +1,15 @@
 import React from "react";
 import "./Contestant.scss";
 import { Contestant } from "./Contestant";
+import { useHistory } from "react-router-dom";
 
 export const ContestIntro = () => {
+  const history = useHistory();
+
+  const goToContestantPage = () => {
+    history.push("/contestants/7824yw8328438");
+  };
+
   let contestants = [
     {
       id: "2332",
@@ -36,6 +43,38 @@ export const ContestIntro = () => {
       imageUrl: "http://somethin someth",
       intro: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, quaerat quod voluptate nulla distinctio provident esse sapiente",
     },
+    {
+      id: "9342",
+      fullName: "Cynthia Abel",
+      age: "24",
+      height: "5'7 ",
+      imageUrl: "http://somethin someth",
+      intro: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, quaerat quod voluptate nulla distinctio provident esse sapiente",
+    },
+    {
+      id: "9343043",
+      fullName: "kate Ogoji",
+      age: "20",
+      height: "5'4 ",
+      imageUrl: "http://somethin someth",
+      intro: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, quaerat quod voluptate nulla distinctio provident esse sapiente",
+    },
+    {
+      id: "63647",
+      fullName: "Cynthia Abel",
+      age: "24",
+      height: "5'7 ",
+      imageUrl: "http://somethin someth",
+      intro: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, quaerat quod voluptate nulla distinctio provident esse sapiente",
+    },
+    {
+      id: "243848",
+      fullName: "kate Ogoji",
+      age: "20",
+      height: "5'4 ",
+      imageUrl: "http://somethin someth",
+      intro: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, quaerat quod voluptate nulla distinctio provident esse sapiente",
+    },
   ];
   return (
     <div className="section-padding">
@@ -57,7 +96,10 @@ export const ContestIntro = () => {
         </div>
       </div>
       <div className="centered-flex section-padding">
-        <button className="sign-up-button">See all contestants</button>
+        <button className="sign-up-button" onClick={goToContestantPage}>
+          {" "}
+          See all contestants
+        </button>
       </div>
     </div>
   );

@@ -44,8 +44,9 @@
 .contestant-box {
   box-sizing: border-box;
   // padding: 0.2rem;
+
   position: relative;
-  box-shadow: 0 0 40px 0 #0000003a;
+  box-shadow: 0 0 10px 0 #0000008c;
   .contestant-image {
     width: 100%;
     overflow: hidden;
@@ -55,12 +56,20 @@
   }
   .contestant-details {
     position: absolute;
-    bottom: 51px;
+    bottom: 50px;
     box-sizing: border-box;
     padding: 1rem 2rem;
+    padding-bottom: 0;
     width: 100%;
     color: #ffffff;
     background-color: rgba(0, 0, 0, 0.468);
+    // background-color: rgba(0, 0, 0, 0.9);
+    .vote-holder {
+      padding: 2rem;
+      position: relative;
+      top: -30px;
+      background-color: #ffffff;
+    }
   }
 }
 

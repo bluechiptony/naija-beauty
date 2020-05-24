@@ -4,7 +4,16 @@ import { BrowserRouter, NavLink, Route } from "react-router-dom";
 import { ContestIntro } from "../Contests/ContestIntro";
 import { Terms } from "../Legal/Terms";
 import UilListUiAlt from "@iconscout/react-unicons/icons/uil-list-ui-alt";
-import * as Unicons from "@iconscout/react-unicons";
+import UilBalanceScale from "@iconscout/react-unicons/icons/uil-balance-scale";
+import UilCommentHeart from "@iconscout/react-unicons/icons/uil-comment-heart";
+import UilBookOpen from "@iconscout/react-unicons/icons/uil-book-open";
+
+{
+  /* <i class="uil uil-comment-heart"></i>
+<i class="uil uil-balance-scale"></i>
+
+<i class="uil uil-book-open"></i> */
+}
 
 export const Landing = () => {
   return (
@@ -83,7 +92,7 @@ export const HowItWorks = () => {
 
 export const LatestContest = () => {
   return (
-    <div>
+    <div className="hero-height section-padding">
       <h1>Latest contests</h1>
     </div>
   );
@@ -91,8 +100,39 @@ export const LatestContest = () => {
 
 export const RulesRegulations = () => {
   return (
-    <div>
-      <h1>Rules and regulations</h1>
+    <div className="hero-height section-padding centered-flex" id="rules">
+      <div className="">
+        <h1 className="center-text text-yellow">Rules and regulations</h1>
+        <div className="regulations-grid">
+          <div className="regulation-item">
+            <div>
+              <UilBalanceScale size="70" />
+            </div>
+            <div>
+              <h3 className="text-yellow">Provide accurate Information</h3>
+            </div>
+            <span className="light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, architecto? Dicta adipisci quam deserunt nisi numquam corrupti officia? Aut sapiente et non voluptatum quis asperiores doloremque assumenda eos amet fugit.</span>
+          </div>
+          <div className="regulation-item">
+            <div>
+              <UilBookOpen size="70" />
+            </div>
+            <div>
+              <h3 className="text-yellow">Provide accurate Information</h3>
+            </div>
+            <span className="light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, architecto? Dicta adipisci quam deserunt nisi numquam corrupti officia? Aut sapiente et non voluptatum quis asperiores doloremque assumenda eos amet fugit.</span>
+          </div>
+          <div className="regulation-item">
+            <div>
+              <UilCommentHeart size="70" />
+            </div>
+            <div>
+              <h3 className="text-yellow">Always endeavour to be respectful</h3>
+            </div>
+            <span className="light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, architecto? Dicta adipisci quam deserunt nisi numquam corrupti officia? Aut sapiente et non voluptatum quis asperiores doloremque assumenda eos amet fugit.</span>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
@@ -134,7 +174,7 @@ export const NavigationBar = () => {
           </NavLink>
         </li>
         <li className="menu-list-item">
-          <NavLink to="/home/appointments" activestyle={{ color: "#ffab13" }}>
+          <NavLink to="/s" activestyle={{ color: "#ffab13" }}>
             <span>How to register</span>
           </NavLink>
         </li>
@@ -144,7 +184,7 @@ export const NavigationBar = () => {
           </NavLink>
         </li>
         <li className="menu-list-item" activestyle={{ color: "#ffab13" }}>
-          <NavLink to="/home/applications">
+          <NavLink to="#rules">
             <span>Rules & regulations</span>
           </NavLink>
         </li>

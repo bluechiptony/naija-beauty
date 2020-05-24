@@ -10,8 +10,14 @@
     width: 40%;
     color: white;
     span {
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       line-height: 1.4rem;
+    }
+
+    li {
+      list-style: none;
+      list-style-type: disc;
+      margin-bottom: 1rem;
     }
   }
 }

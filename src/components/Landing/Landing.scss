@@ -7,6 +7,9 @@
 .hero-bg {
   background-image: url("../../assets/images/hero-babe.jpg");
   background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .bg-register {
   background-image: url("../../assets/images/how-to-register.jpg");
@@ -148,4 +151,16 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
+}
+.regulations-grid {
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin: 0 auto;
+}
+
+.regulation-item {
+  text-align: center;
+  padding: 1rem 2rem;
 }

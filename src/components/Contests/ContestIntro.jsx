@@ -77,13 +77,13 @@ export const ContestIntro = () => {
     },
   ];
   return (
-    <div className="section-padding">
+    <div className="section-padding bg-black">
       <div className="centered-flex">
         <div className="center-intro">
           <span>
-            <h1 className="text-yellow">Contestants</h1>
+            <h1 className="text-white">Contestants</h1>
           </span>
-          <span className="light">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, quaerat quod voluptate nulla distinctio provident esse sapiente facere quibusdam natus id molestiae porro beatae molestias eum dignissimos incidunt! Laborum, expedita officiis explicabo</span>
+          <span className="light text-white">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, quaerat quod voluptate nulla distinctio provident esse sapiente facere quibusdam natus id molestiae porro beatae molestias eum dignissimos incidunt! Laborum, expedita officiis explicabo</span>
         </div>
       </div>
 

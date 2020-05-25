@@ -8,13 +8,6 @@ import UilBalanceScale from "@iconscout/react-unicons/icons/uil-balance-scale";
 import UilCommentHeart from "@iconscout/react-unicons/icons/uil-comment-heart";
 import UilBookOpen from "@iconscout/react-unicons/icons/uil-book-open";
 
-{
-  /* <i class="uil uil-comment-heart"></i>
-<i class="uil uil-balance-scale"></i>
-
-<i class="uil uil-book-open"></i> */
-}
-
 export const Landing = () => {
   return (
     <div>

@@ -1,7 +1,7 @@
 .login-box {
   box-sizing: border-box;
   padding: 2rem;
-  width: 25%;
+  width: 35%;
 }
 
 .hero-bg {
@@ -35,4 +35,10 @@
 .film-bg {
   height: 100vh;
   background-color: #0c0c0ca6;
+}
+
+.button-share {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }

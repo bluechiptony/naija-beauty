@@ -2,14 +2,14 @@ import React from "react";
 import "./App.scss";
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import { Landing, NavigationBar, Footer } from "./components/Landing/Landing";
+import { NavigationBar, Footer } from "./components/Landing/Landing";
 import { Authentication, SignUp } from "./components/Authentication/Authentication";
 import { Home } from "./components/Landing/Landing";
 import { Terms, Privacy } from "./components/Legal/Terms";
 import { Contestants } from "./components/Contests/Contestant";
-
 function App() {
   const showNavBar = true;
+
   return (
     <div className="App">
       <Router>

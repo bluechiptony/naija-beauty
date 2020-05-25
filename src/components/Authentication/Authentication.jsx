@@ -2,6 +2,8 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import "./Authentication.scss";
 import { NavLink } from "react-router-dom";
+import FacebookLogin from "react-facebook-login";
+import TwitterLogin from "react-twitter-login";
 
 export const Authentication = () => {
   const { register } = useForm();
@@ -9,6 +11,19 @@ export const Authentication = () => {
     <div className="hero-height hero-bg">
       <div className="film-bg centered-flex">
         <div className="login-box">
+          <div className="social-signup">
+            <div className="app-form-row">
+              <h3 className="text-white center-text">Login with social media</h3>
+            </div>
+            <div className="app-form-row button-share">
+              <FacebookLogin textButton="Facebook Login" />
+              <TwitterLogin buttonTheme="dark" />
+            </div>
+          </div>
+
+          <div className="app-form-row">
+            <h3 className="text-white center-text">Or</h3>
+          </div>
           <h3 className="text-white center-text">Please enter your login credentials</h3>
           <form>
             <div className="app-form-row">
@@ -51,10 +66,34 @@ export const Authentication = () => {
 
 export const SignUp = () => {
   const { register } = useForm();
+  const responseFacebook = (err, data) => {
+    if (!err) {
+      console.log(data);
+    } else {
+      console.log(err);
+    }
+  };
+
+  const twitterAuthHandler = (err, data) => {
+    console.log(err, data);
+  };
   return (
     <div className="hero-height hero-bg">
       <div className="film-bg centered-flex">
         <div className="login-box">
+          <div className="social-signup">
+            <div className="app-form-row">
+              <h3 className="text-white center-text">Sign up you with social media account</h3>
+            </div>
+            <div className="app-form-row button-share">
+              <FacebookLogin appId={process.env.REACT_APP_FACEBOOK_APP_ID} textButton="Facebook Login" autoLoad={true} fields="name,email,picture" scope="public_profile,user_friends,user_actions.books" callback={responseFacebook} />
+              <TwitterLogin buttonTheme="dark" authCallback={twitterAuthHandler} consumerKey={process.env.REACT_APP_TWITTER_CONSUMER_API_KEY} consumerSecret={process.env.REACT_APP_TWITTER_CONSUMER_SECRET_KEY} callbackUrl={process.env.REACT_APP_TWITTER_CALLBACK_URL} />
+            </div>
+          </div>
+
+          <div className="app-form-row">
+            <h3 className="text-white center-text">Or</h3>
+          </div>
           <h3 className="text-white center-text">Please enter your details</h3>
           <form>
             <div className="app-form-row">

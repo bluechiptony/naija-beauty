@@ -90,8 +90,9 @@ export const ContestIntro = () => {
       <div className="contestants-spacer">
         <div className="contestants-grid">
           {contestants.map((contestant, i) => {
-            if (i > 3) return;
-            return <Contestant id={contestant.id} key={contestant.id} fullName={contestant.fullName} age={contestant.age} height={contestant.height} />;
+            if (i < 4) {
+              return <Contestant id={contestant.id} key={contestant.id} fullName={contestant.fullName} age={contestant.age} height={contestant.height} />;
+            }
           })}
         </div>
       </div>

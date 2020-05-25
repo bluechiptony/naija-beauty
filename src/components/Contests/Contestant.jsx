@@ -2,10 +2,10 @@ import React from "react";
 import girl from "../../assets/images/model-port.jpg";
 
 export const Contestant = ({ fullName, age, height }) => {
-  const getContainerWidth = () => {
-    let container = document.getElementById("container-box").getAttribute("width");
-    return container;
-  };
+  // const getContainerWidth = () => {
+  //   let container = document.getElementById("container-box").getAttribute("width");
+  //   return container;
+  // };
 
   return (
     <div className="pointer contestant-box" id="container-box">

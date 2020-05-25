@@ -7,6 +7,7 @@ import TwitterLogin from "react-twitter-login";
 
 export const Authentication = () => {
   const { register } = useForm();
+
   return (
     <div className="hero-height hero-bg">
       <div className="film-bg centered-flex">
@@ -86,8 +87,8 @@ export const SignUp = () => {
               <h3 className="text-white center-text">Sign up you with social media account</h3>
             </div>
             <div className="app-form-row button-share">
-              <FacebookLogin appId={process.env.REACT_APP_FACEBOOK_APP_ID} textButton="Facebook Login" autoLoad={true} fields="name,email,picture" scope="public_profile,user_friends,user_actions.books" callback={responseFacebook} />
-              <TwitterLogin buttonTheme="dark" authCallback={twitterAuthHandler} consumerKey={process.env.REACT_APP_TWITTER_CONSUMER_API_KEY} consumerSecret={process.env.REACT_APP_TWITTER_CONSUMER_SECRET_KEY} callbackUrl={process.env.REACT_APP_TWITTER_CALLBACK_URL} />
+              <FacebookLogin appId={process.env.REACT_APP_FACEBOOK_APP_ID} textButton="Facebook Login" autoLoad={true} reauthenticate={true} fields="name,email,picture" scope="public_profile,user_friends,user_actions.books" callback={responseFacebook} />
+              <TwitterLogin buttonTheme="dark" authCallback={twitterAuthHandler} consumerKey={process.env.REACT_APP_TWITTER_CONSUMER_API_KEY} consumerSecret={process.env.REACT_APP_TWITTER_CONSUMER_SECRET_KEY} callbackUrl="https://9jabeauty.com/" />
             </div>
           </div>
 

@@ -67,6 +67,9 @@ export const Authentication = () => {
 
 export const SignUp = () => {
   const { register } = useForm();
+
+  console.log(process.env.REACT_APP_TWITTER_CALLBACK_URL);
+
   const responseFacebook = (err, data) => {
     if (!err) {
       console.log(data);
@@ -88,7 +91,7 @@ export const SignUp = () => {
             </div>
             <div className="app-form-row button-share">
               <FacebookLogin appId={process.env.REACT_APP_FACEBOOK_APP_ID} textButton="Facebook Login" autoLoad={true} reauthenticate={true} fields="name,email,picture" scope="public_profile,user_friends,user_actions.books" callback={responseFacebook} />
-              <TwitterLogin buttonTheme="dark" authCallback={twitterAuthHandler} consumerKey={process.env.REACT_APP_TWITTER_CONSUMER_API_KEY} consumerSecret={process.env.REACT_APP_TWITTER_CONSUMER_SECRET_KEY} callbackUrl="https://9jabeauty.com/" />
+              <TwitterLogin buttonTheme="dark" authCallback={twitterAuthHandler} consumerKey={process.env.REACT_APP_TWITTER_CONSUMER_API_KEY} consumerSecret={process.env.REACT_APP_TWITTER_CONSUMER_SECRET_KEY} callbackUrl={process.env.REACT_APP_TWITTER_CALLBACK_URL} />
             </div>
           </div>
 
